@@ -7,6 +7,11 @@ const nextConfig = {
             hostname: '**.clerk.com',
             port: '',
           },
+          {
+            protocol: 'https',
+            hostname: '**.supabase.co',
+            port: '',
+          }
         ],
       },
 };  

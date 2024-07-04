@@ -17,7 +17,7 @@ export default function FormContainer({action, children}: {action: actionFunctio
         if (state.message) {
           toast({ description: state.message });
         }
-      }, [state]);
+      }, [state, toast]);
 
     return <form action={formAction}>{children}</form>
 }
