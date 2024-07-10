@@ -15,14 +15,15 @@ type ImageInputContainerProps = {
   text: string;
   children?: React.ReactNode;
 };
- export default function ImageInputContainer(props: ImageInputContainerProps){
+
+export default function ImageInputContainer(props: ImageInputContainerProps){
   const {image, name, action, text} = props;
   const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
   const userIcon = <LuUser2 className='h-24 w-24 bg-primary rounded text-white mb-4' />;
 
   return (
     <div>
-      {image ? <Image src={image} alt={name} width={100} height={100} className='rounded object-cover mb-4 w-24 h-24'/> : userIcon}
+      {image ? <img src={image} alt={name} className='rounded object-cover mb-4 w-24 h-24'/> : userIcon}
       <Button variant='outline' size='sm' onClick={() => setUpdateFormVisible((prev) => !prev)}>{text}</Button>
       {isUpdateFormVisible && (
         <div className='max-w-lg mt-4'>
@@ -35,4 +36,4 @@ type ImageInputContainerProps = {
       )}
     </div>
   )
- }
+}
